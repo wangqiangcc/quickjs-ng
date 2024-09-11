@@ -474,8 +474,8 @@ struct JSString {
     struct list_head link; /* string list */
 #endif
     union {
-        __extension__ uint8_t str8[0]; /* 8 bit strings will get an extra null terminator */
-        __extension__ uint16_t str16[0];
+        /*__extension__*/ uint8_t str8[0]; /* 8 bit strings will get an extra null terminator */
+        /*__extension__*/ uint16_t str16[0];
     } u;
 };
 
